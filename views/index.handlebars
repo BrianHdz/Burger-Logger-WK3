@@ -1,7 +1,39 @@
-/* 
-Setup the index.handlebars to have the 
-template that Handlebars can render onto.
+<h1>Eat Dem Burgers!</h1>
 
-Create a button in index.handlebars that will 
-submit the user input into the database.
-*/
+<h2>Tasty burgers you haven't eaten</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#unless devoured}}
+      {{> burgers/burger-block devoured=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Burgers you've devoured whole!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#if devoured}}
+      {{> burgers/burger-block devoured=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add a scrumptious burger</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="burg">Burger Name:</label>
+    <input type="text" id="burg" name="name">
+  </div>
+
+{{!-- in case you want to initially create it as devoured --}}
+  {{!-- <div class="form-group">
+    <label for="devour">Devour It?</label><br>
+    <input type="radio" name="devoured" value="1" checked> Devoured!<br>
+    <input type="radio" name="devoured" value="0"> Not Devoured
+  </div> --}}
+
+  <button type="submit">Add Burger</button>
+</form>
