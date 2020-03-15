@@ -1,19 +1,30 @@
+/* body {
+  background-image: url(https://d1jie5o4kjowzg.cloudfront.net/multiple-story-images/nestle_awesome_burger.jpg?IEOle6wfZ6rSuCzoDLDgGZNnuUxCGqp2);
+  background-color: tomato;
+} */
+ 
+.backgroundColor {
+  background-image: url(https://d1jie5o4kjowzg.cloudfront.net/multiple-story-images/nestle_awesome_burger.jpg?IEOle6wfZ6rSuCzoDLDgGZNnuUxCGqp2);
+  
+  background-color: tomato;
+}
+
 li {
     padding: 5px;
     margin: 5px;
     background: #faebd7;
   }
   
-  .label {
+.label {
     font-weight: bold;
   }
   
-  .create-update-form {
+.create-update-form {
     padding: 5px;
     margin: 5px;
     background: aqua;
   }
   
-  .form-group {
+.form-group {
     margin-bottom: 5px;
   }

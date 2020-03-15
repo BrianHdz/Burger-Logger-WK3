@@ -7,7 +7,7 @@ $(function() {
       var newDevourState = {
         devoured: newDevour
       };
-  
+   
       // PUT --- Front end.
       $.ajax("/api/burgers/" + id, {
         type: "PUT",
@@ -26,10 +26,10 @@ $(function() {
       event.preventDefault();
   
       var newBurger = {
-        name: $("#burg").val().trim(),
+        burger_name: $("#burg").val().trim(),
         devoured: $("[name=devoured]:checked").val().trim()
       };
-  
+      console.log(newBurger + " = newBurger")
       // POST to the front end.
       $.ajax("/api/burgers", {
         type: "POST",
