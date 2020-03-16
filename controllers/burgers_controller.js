@@ -16,7 +16,7 @@ router.get("/", function (req, res) {
         var hbsObject = {
             burgers: data
         };
-        console.log(hbsObject);
+        console.log(hbsObject + " controllers - Ln19");
         res.render("index", hbsObject);
     });
 });
@@ -25,8 +25,9 @@ router.get("/", function (req, res) {
 
 // POST =====
 router.post("/api/burgers", function (req, res) {
-    burger.insertOne(["burger_name", "devoured"], [req.body.burger_name, req.body.devoured], function (result) {
-        // Create new quote ID.
+    burger.insertOne(["burger_name", "devoured"], 
+    [req.body.burger_name, req.body.devoured], function (result) {
+        // Create new burger ID.
         res.json({ id: result.insertId });
     });
 });
@@ -37,14 +38,13 @@ router.post("/api/burgers", function (req, res) {
 router.put("/api/burgers/:id", function(req, res) {
     var condition = "id = " + req.params.id;
 
-    console.log("condition", condition);
+    console.log(condition + " controller - Ln40");
 
     burger.updateOne(
         {
             devoured: req.body.devoured
         },
-        condition,
-        function(result) {
+        condition, function(result) {
             if (result.changedRows === 0) {
                 return res.status(404).end();
             }

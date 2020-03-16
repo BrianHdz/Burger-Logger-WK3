@@ -1,7 +1,16 @@
 <li>
 	{{burger_name}}
-
-	<button class="change-devoured" data-id="{{id}}" data-newdevour="{{devour}}">
-		{{#if devoured}}Devour It!{{else}}Rewind Time!{{/if}}
+console.log ({{burger_name}} + " from burger-block");
+	<button class="change-devoured" data-id="{{id}}" data-newdevour="{{devoured}}">
+		{{#if devoured}}Eat It!{{else}}Rewind Time!{{/if}}
 	</button>
 </li>
+{{!-- 
+<li class="list-group-item">
+	{{burger_name}}
+	console.log ({{burger_name}} + " from burger-block");
+
+	<button class="btn btn-light change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}">
+		{{#if devoured}}Chow time!{{else}}Rewind Time!{{/if}}
+	</button>
+</li> --}}

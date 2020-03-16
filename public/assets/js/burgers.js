@@ -3,10 +3,11 @@ $(function() {
     $(".change-devoured").on("click", function(event) {
       var id = $(this).data("id");
       var newDevour = $(this).data("newdevour");
-  
+        console.log(newDevour + " p/j/b.js")
       var newDevourState = {
         devoured: newDevour
-      };
+      }; 
+        console.log(newDevourState + " p/j/b.js")
    
       // PUT --- Front end.
       $.ajax("/api/burgers/" + id, {
