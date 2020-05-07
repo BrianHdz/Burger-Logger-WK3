@@ -21,8 +21,6 @@ router.get("/", function (req, res) {
     });
 });
 
-
-
 // POST =====
 router.post("/api/burgers", function (req, res) {
     burger.insertOne(["burger_name", "devoured"], 
@@ -32,12 +30,9 @@ router.post("/api/burgers", function (req, res) {
     });
 });
 
-
-
 // PUT =====
 router.put("/api/burgers/:id", function(req, res) {
     var condition = "id = " + req.params.id;
-
     console.log(condition + " controller - Ln40");
 
     burger.updateOne(
